@@ -1,3 +1,3 @@
-# vimrc
+# dotfiles
 
-rc of the vim
+le files of dot
