@@ -28,6 +28,7 @@ set laststatus=2
 
 syntax enable
 
+" mappings
 inoremap jj <Esc>
 
 " statusline colors
