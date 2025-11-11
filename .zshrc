@@ -34,3 +34,10 @@ alias gm='git merge'
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+stats() {
+  CPU=$(top -l 1 | grep "CPU usage" | awk '{print $3" user "$5" sys "$7" idle"}')
+  MEM=$(top -l 1 | grep "PhysMem" | awk '{print $2" used " $6" free"}')
+  echo "💻 $CPU | 🧠 $MEM"
+}
+stats
